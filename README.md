@@ -65,4 +65,63 @@ to have the dialog re-center itself, maybe after the content redraws itself.
 
 ### Context Menu
 
+A flexible React context menu component.
+
+![alt text](https://github.com/MarkWattsBoomi/FCMKit/blob/main/ContextMenu.png)
+
+Declare a referenece variable in your class to access the modal
+
+````
+export class myClass extends React.Component<any,any> {
+    fcmmenu: FCMContextMenu;
+
+    ....
+}
+````
+Add the component in your render() function
+````
+return(
+    <div
+        onContextMenu={this.showContextMenu}
+    >
+        <FCMContextMenu 
+            ref={(menu: FCMContextMenu) => {this.fcmmenu = menu}}
+        />
+    </div>
+);
+````
+Implement a handler for the onContextMenu
+````
+    showContextMenu(e: any) {
+
+        const listItems: Map<string , any> = new Map();
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (this.fcmmenu) {
+            // here we can add whatever items we want
+            listItems.set('paste', (
+                <FCMContextMenuItem 
+                    onClick={this.pasteElement}
+                    title="Paste page element"
+                    icon={<Clipboard 
+                        size={16}
+                        weight="duotone"
+                    />}
+                    label="Paste page element"
+                />
+            ));
+            if(listItems.size > 0) {   
+                this.contextMenu.showContextMenu(e.clientX, e.clientY, listItems);
+                this.forceUpdate();
+            }
+        }
+    }
+````
+We could add a context menu separator like this
+````
+    listItems.set('mvsep', (
+        <KwestContextMenuSeparator />
+    ));
+````
 
