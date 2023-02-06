@@ -27,6 +27,23 @@ return(
     </div>
 );
 ````
+To show the modal with any content do this: -
+````
+    let frm = (
+        ...some react content ... maybe implement a form in another component
+    );
+
+    this.fcmmodal.showDialog(
+        <Pencil size={16} weight="duotone" />,
+        "App Version Properties",
+        frm,
+        [new FCMModalButton("Save",this.doSomething),new FCMModalButton("Cancel",this.modalDialog.hideDialog)]
+    );
+
+    doSomething(e: any) {
+        this.modalDialog.hideDialog();
+    }
+````
 
 
 
