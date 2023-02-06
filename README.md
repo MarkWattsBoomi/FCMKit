@@ -43,11 +43,11 @@ To show the modal with any content do this: -
         <Pencil size={16} weight="duotone" />,
         "App Version Properties",
         frm,
-        [new FCMModalButton("Save",this.doSomething),new FCMModalButton("Cancel",this.modalDialog.hideDialog)]
+        [new FCMModalButton("Save",this.doSomething),new FCMModalButton("Cancel",this.fcmmodal.hideDialog)]
     );
 
     doSomething(e: any) {
-        this.modalDialog.hideDialog();
+        this.fcmmodal.hideDialog();
     }
 ````
 - The first argument is an icon to show top left, here i'm using a Phosphor-Icon.
