@@ -1,0 +1,48 @@
+.fcmcm {
+    box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    display: none;
+    background-color: #fefefe;
+    border-radius: 0.3rem;
+    border: 1px solid #033d58;
+    pointer-events: all;
+    z-index: 100000;
+}
+
+.fcmcm-list {
+    list-style: none;
+    padding: 10px;
+    margin: 0 !important;
+}
+
+.fcmcm-item {
+    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+    cursor: pointer;
+    color: #111;
+    border-radius: 0.3rem;
+    white-space: nowrap;
+    line-height: 1;
+    display: flex;
+}
+
+.fcmcm-item:hover {
+    color: #033d58;
+    background-color: #ddd;
+}
+
+.fcmcm-item-icon {
+    margin-right: 10px;
+}
+
+.fcmcm-item-label {
+    margin: auto;
+    margin-left: 0.5rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.fcmcm-sep {
+    border-top: 1px solid #111;
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+}
