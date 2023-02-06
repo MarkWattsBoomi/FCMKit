@@ -8,6 +8,8 @@ This library contains implementations of several re-usable react components
 ### Modal Dialog
 A simple React modal component.
 
+Auto centering and draggable to reposition.
+
 Declare a referenece variable in your class to access the modal
 
 ````
@@ -44,6 +46,12 @@ To show the modal with any content do this: -
         this.modalDialog.hideDialog();
     }
 ````
+The first argument is an icon to show top left, here i'm using a Phosphor-Icon.
+The second argument is the dialog box title bar content.
+The thisd argument is the dialog box content, this can be anything renderable.  Maybe another react component implementing the form.
+The 4th arg is an array of buttons to show in the footer, each one takes a label and handler function.
+
+You can call this.fcmmodal.centerDialog() to have the dialog re-center itself, maybe after the content redraws itself.
 
 
 
