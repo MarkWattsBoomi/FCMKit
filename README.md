@@ -2,11 +2,15 @@
 
 ## Overview
 
-This library contains implementations of several re-usable react components
+This library contains implementations of several re-usable react components.
+
+Install with "npm install --s fcmkit"
 
 
 ### Modal Dialog
 A simple React modal component.
+
+![alt text](https://github.com/MarkWattsBoomi/FCMKit/blob/main/ModalDialog.png)
 
 Auto centering and draggable to reposition.
 
