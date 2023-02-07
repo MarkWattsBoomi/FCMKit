@@ -64,7 +64,7 @@ export class FCMContextMenu extends React.Component<any, any> {
     render() {
         return (
             <div
-                className="kcm"
+                className="fcmcm"
                 onMouseLeave={this.hideContextMenu}
                 style={{
                     left: this.displayStyle.left, 

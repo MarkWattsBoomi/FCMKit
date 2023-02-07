@@ -1,4 +1,4 @@
 export * from './ModalDialog/FCMModal';
-export * from './ContextMenu/FCDContextMenu';
+export * from './ContextMenu/FCMContextMenu';
 
 
