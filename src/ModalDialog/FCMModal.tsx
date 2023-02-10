@@ -1,9 +1,10 @@
-import React = require("react");
+
 import { eFCMDragEventType, FCMDragEvent } from './FCMDragEvent';
 import './FCMModal.css';
 import { FCMModalButton } from './FCMModalButton';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons/faCircleXmark";
+import * as React from 'react';
 
 
 // Declaration of the component as React Class Component

@@ -52,7 +52,7 @@ To show the modal with any content do this: -
 ````
 - The first argument is an icon to show top left, here i'm using a Phosphor-Icon.
 - The second argument is the dialog box title bar content.
-- The thisd argument is the dialog box content, this can be anything renderable.  Maybe another react component implementing the form.
+- The third argument is the dialog box content, this can be anything renderable.  Maybe another react component implementing the form.
 - The 4th arg is an array of buttons to show in the footer, each one takes a label and handler function.
 
 You can call 

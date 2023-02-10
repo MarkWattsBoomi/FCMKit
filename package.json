@@ -1,6 +1,6 @@
 {
   "name": "fcmkit",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "fcm kit",
   "main": "lib/fcmkit",
   "typings": "lib/fcmkit",
