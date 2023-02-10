@@ -2,7 +2,9 @@ import React = require("react");
 import { eFCMDragEventType, FCMDragEvent } from './FCMDragEvent';
 import './FCMModal.css';
 import { FCMModalButton } from './FCMModalButton';
-import { XCircle } from 'phosphor-react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-regular-svg-icons/faCircleXmark";
+
 
 // Declaration of the component as React Class Component
 export class FCMModal extends React.Component<any, any> {
@@ -162,10 +164,7 @@ export class FCMModal extends React.Component<any, any> {
                             title="Close"
                             onMouseDown={(e) => {this.stopEventBubble(e); this.dialogOnClose() }}
                         >
-                            <XCircle 
-                                size={16}
-                                weight="duotone"
-                            />
+                            <FontAwesomeIcon icon={faCircleXmark} className="fcmmod-icon" />
                         </span>
                     </div>
                 </div>

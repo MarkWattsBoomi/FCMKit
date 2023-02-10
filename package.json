@@ -1,6 +1,6 @@
 {
   "name": "fcmkit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "fcm kit",
   "main": "lib/fcmkit",
   "typings": "lib/fcmkit",
@@ -9,17 +9,19 @@
     "url": "https://github.com/MarkWattsBoomi/FCMKit"
   },
   "scripts": {
-      "copycss":"cp ./src/**/*.css lib/",
-      "build":"tsc && npm run copycss"
+    "copycss": "cp ./src/**/*.css lib/",
+    "build": "tsc && npm run copycss"
   },
   "author": "Mark Watts",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-regular-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "buffer": "^6.0.3",
     "css-loader": "^6.7.1",
     "dedent": "^0.7.0",
     "mini-css-extract-plugin": "^2.6.1",
-    "phosphor-react": "^1.4.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "source-map-loader": "^4.0.0",
