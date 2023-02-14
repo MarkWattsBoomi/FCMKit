@@ -85,7 +85,7 @@ export class FCMContextMenu extends React.Component<any, any> {
     }
 }
 
-export class KwestContextMenuItem extends React.Component<any, any> {
+export class FCMContextMenuItem extends React.Component<any, any> {
     render() {
         return(
             <li
@@ -104,7 +104,7 @@ export class KwestContextMenuItem extends React.Component<any, any> {
     }
 }
 
-export class KwestContextMenuSeparator extends React.Component<any, any> {
+export class FCMContextMenuSeparator extends React.Component<any, any> {
     render() {
         return(
             <li
