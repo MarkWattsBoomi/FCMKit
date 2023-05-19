@@ -121,7 +121,7 @@ Implement a handler for the onContextMenu
 We could add a context menu separator like this
 ````
     listItems.set('mvsep', (
-        <KwestContextMenuSeparator />
+        <FCMContextMenuSeparator />
     ));
 ````
 
