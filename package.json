@@ -1,6 +1,6 @@
 {
   "name": "fcmkit",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "fcm kit",
   "main": "lib/fcmkit",
   "typings": "lib/fcmkit",
@@ -33,7 +33,5 @@
     "@types/react": "^16.7.3",
     "@types/react-dom": "^16.0.9",
     "typescript": "^4.0.3"
-  },
-  "bundledDependencies": [],
-  "bundleDependencies": []
+  }
 }

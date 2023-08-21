@@ -22,6 +22,8 @@ export class FCMModal extends React.Component<any, any> {
 
     top: number = 0;
     left: number = 0;
+
+    clientStyle: React.CSSProperties;
   // Init of the component before it is mounted.
     constructor(props: any) {
         super(props);
@@ -74,13 +76,14 @@ export class FCMModal extends React.Component<any, any> {
       this.forceUpdate();
     }
 
-    async showDialog(icon: any, title: string, content: any, buttons: FCMModalButton[], onClose?: any) {
+    async showDialog(icon: any, title: string, content: any, buttons: FCMModalButton[], onClose?: any, clientStyle?:React.CSSProperties) {
         this.dialogVisible = true;
         this.dialogIcon = icon; 
         this.dialogTitle = title;
         this.dialogContent = content;
         this.dialogOnClose = onClose || this.hideDialog;
         this.dialogButtons = buttons;
+        this.clientStyle = clientStyle;
         this.forceUpdate();
     }
   
@@ -140,6 +143,14 @@ export class FCMModal extends React.Component<any, any> {
               </button>
           );
       }
+      let buttonBar: any;
+      if(buttons.length>0){
+        buttonBar=(
+          <div className="fcmmod-dialog-button-bar">
+            {buttons}   
+          </div>
+        );
+      }
       content = (
         <div 
           className="fcmmod-redaction"
@@ -170,13 +181,14 @@ export class FCMModal extends React.Component<any, any> {
                     </div>
                 </div>
                 <div className="fcmmod-dialog-body">
-                    <div className="fcmmod-dialog-body-client">
+                    <div 
+                      className="fcmmod-dialog-body-client"
+                      style={this.clientStyle}
+                    >
                         {this.dialogContent}                               
                     </div>
                 </div >
-                  <div className="fcmmod-dialog-button-bar">
-                      {buttons}   
-                  </div>
+                  {buttonBar}
               </div >
           </div>
         </div>
