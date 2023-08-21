@@ -163,7 +163,10 @@ export class FCMModal extends React.Component<any, any> {
             className="fcmmod-content"
             ref={(element: HTMLDivElement) => (this.setDialog(element))}
             >
-              <div className="fcmmod-dialog">
+              <div 
+                className="fcmmod-dialog"
+                style={this.clientStyle}
+              >
                 <div 
                   className="fcmmod-dialog-header"
                   onMouseDown={(e) => {this.onMouseDown(e)}}
