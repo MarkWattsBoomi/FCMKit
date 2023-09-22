@@ -151,6 +151,33 @@ export class FCMModal extends React.Component<any, any> {
           </div>
         );
       }
+
+      let header: any;
+      let bodyMouseDown: any;
+      if(this.dialogIcon || this.dialogTitle) {
+        header=(
+          <div 
+            className="fcmmod-dialog-header"
+            onMouseDown={(e) => {this.onMouseDown(e)}}
+          >
+              <span className="fcmmod-dialog-header-icon">{this.dialogIcon}</span>
+              <span className="fcmmod-dialog-header-title">{this.dialogTitle}</span>
+              <div style={{display: 'flex', flexDirection: "row", marginLeft: 'auto', flexGrow: 0}}>
+                  <span
+                      style={{cursor: 'pointer' , marginRight: '5px', display: "flex"}}
+                      title="Close"
+                      onMouseDown={(e) => {this.stopEventBubble(e); this.dialogOnClose() }}
+                  >
+                      <FontAwesomeIcon icon={faCircleXmark} className="fcmmod-icon" />
+                  </span>
+              </div>
+          </div>
+        );
+      }
+      else {
+        bodyMouseDown=this.onMouseDown
+      }
+
       content = (
         <div 
           className="fcmmod-redaction"
@@ -167,29 +194,17 @@ export class FCMModal extends React.Component<any, any> {
                 className="fcmmod-dialog"
                 style={this.clientStyle}
               >
+                {header}
                 <div 
-                  className="fcmmod-dialog-header"
-                  onMouseDown={(e) => {this.onMouseDown(e)}}
+                  className="fcmmod-dialog-body"
+                  onMouseDown={bodyMouseDown}
                 >
-                    <span className="fcmmod-dialog-header-icon">{this.dialogIcon}</span>
-                    <span className="fcmmod-dialog-header-title">{this.dialogTitle}</span>
-                    <div style={{display: 'flex', flexDirection: "row", marginLeft: 'auto', flexGrow: 0}}>
-                        <span
-                            style={{cursor: 'pointer' , marginRight: '5px', display: "flex"}}
-                            title="Close"
-                            onMouseDown={(e) => {this.stopEventBubble(e); this.dialogOnClose() }}
-                        >
-                            <FontAwesomeIcon icon={faCircleXmark} className="fcmmod-icon" />
-                        </span>
-                    </div>
-                </div>
-                <div className="fcmmod-dialog-body">
-                    <div 
-                      className="fcmmod-dialog-body-client"
-                      style={this.clientStyle}
-                    >
-                        {this.dialogContent}                               
-                    </div>
+                  <div 
+                    className="fcmmod-dialog-body-client"
+                    style={this.clientStyle}
+                  >
+                      {this.dialogContent}                               
+                  </div>
                 </div >
                   {buttonBar}
               </div >
