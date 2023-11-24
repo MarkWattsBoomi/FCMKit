@@ -89,6 +89,7 @@ export class FCMContextMenuItem extends React.Component<any, any> {
     render() {
         return(
             <li
+                key={this.props.key}
                 className="fcmcm-item"
                 onClick={this.props.onClick}
                 title={this.props.title}
