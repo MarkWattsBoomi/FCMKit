@@ -102,6 +102,7 @@ Implement a handler for the onContextMenu
             // here we can add whatever items we want
             listItems.set('paste', (
                 <FCMContextMenuItem 
+                    key='paste'
                     onClick={this.pasteElement}
                     title="Paste page element"
                     icon={<Clipboard 
