@@ -1,6 +1,6 @@
 {
   "name": "fcmkit",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "fcm kit",
   "main": "lib/fcmkit",
   "typings": "lib/fcmkit",
@@ -19,6 +19,9 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "react": "18.3.2"
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55"
   }
 }
