@@ -1,6 +1,6 @@
 {
   "name": "fcmkit",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "fcm kit",
   "main": "lib/fcmkit",
   "typings": "lib/fcmkit",
@@ -15,23 +15,10 @@
   "author": "Mark Watts",
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.3.0",
-    "@fortawesome/free-regular-svg-icons": "^6.3.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "buffer": "^6.0.3",
-    "css-loader": "^6.7.1",
-    "dedent": "^0.7.0",
-    "mini-css-extract-plugin": "^2.6.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "source-map-loader": "^4.0.0",
-    "stream": "0.0.2",
-    "timers": "^0.1.1",
-    "ts-loader": "^9.3.1"
-  },
-  "devDependencies": {
-    "@types/react": "^16.7.3",
-    "@types/react-dom": "^16.0.9",
-    "typescript": "^4.0.3"
+    "react": "^18.3.2"
   }
 }
