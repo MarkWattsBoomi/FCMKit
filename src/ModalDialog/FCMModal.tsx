@@ -135,6 +135,7 @@ export class FCMModal extends React.Component<any, any> {
       for(const button of this.dialogButtons) {
           buttons.push(
               <button 
+                  key={button.label}
                   className="fcmmod-dialog-button-bar-button" 
                   title={button.label} 
                   onMouseDown={(e) => {e.stopPropagation();button.handler()}}
