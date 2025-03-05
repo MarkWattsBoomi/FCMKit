@@ -155,6 +155,18 @@ export class FCMModal extends React.Component<any, any> {
 
       let header: any;
       let bodyMouseDown: any;
+      let topButtons: any[] = [];
+
+      topButtons.push(
+        <span
+            style={{cursor: 'pointer' , marginRight: '5px', display: "flex"}}
+            title="Close"
+            onMouseDown={(e) => {this.stopEventBubble(e); this.dialogOnClose() }}
+        >
+            <FontAwesomeIcon icon={faCircleXmark} className="fcmmod-icon" />
+        </span>
+      );
+
       if(this.dialogIcon || this.dialogTitle) {
         header=(
           <div 
@@ -164,13 +176,7 @@ export class FCMModal extends React.Component<any, any> {
               <span className="fcmmod-dialog-header-icon">{this.dialogIcon}</span>
               <span className="fcmmod-dialog-header-title">{this.dialogTitle}</span>
               <div style={{display: 'flex', flexDirection: "row", marginLeft: 'auto', flexGrow: 0}}>
-                  <span
-                      style={{cursor: 'pointer' , marginRight: '5px', display: "flex"}}
-                      title="Close"
-                      onMouseDown={(e) => {this.stopEventBubble(e); this.dialogOnClose() }}
-                  >
-                      <FontAwesomeIcon icon={faCircleXmark} className="fcmmod-icon" />
-                  </span>
+                  
               </div>
           </div>
         );
